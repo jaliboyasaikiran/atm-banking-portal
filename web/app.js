@@ -14,6 +14,20 @@ const statementPanel = document.querySelector('#statement-panel');
 const statementList = document.querySelector('#statement-list');
 let selectedAction = null;
 
+function updateClocks() {
+  const currentTime = new Intl.DateTimeFormat('en-IN', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  }).format(new Date());
+  document.querySelector('#rail-clock').textContent = currentTime;
+  document.querySelector('#machine-clock').textContent = currentTime;
+}
+
+updateClocks();
+setInterval(updateClocks, 1000);
+
 const bankCard = document.querySelector('#bank-card');
 bankCard.addEventListener('pointermove', (event) => {
   if (swipeView.classList.contains('swiped')) return;
@@ -53,6 +67,8 @@ function updateBalance(balance) {
 
 function updateStatus(data) {
   updateBalance(data.balance);
+  balanceElement.closest('.balance-panel').classList.remove('value-updated');
+  requestAnimationFrame(() => balanceElement.closest('.balance-panel').classList.add('value-updated'));
   dailyLimitElement.textContent = `₹${Number(data.daily_limit).toLocaleString('en-IN')}`;
   dailyWithdrawnElement.textContent = `₹${Number(data.daily_withdrawal).toLocaleString('en-IN')}`;
   atmCashElement.textContent = `₹${Number(data.atm_cash).toLocaleString('en-IN')}`;
@@ -83,8 +99,15 @@ async function request(path, body) {
   return data;
 }
 
+function setButtonState(button, isBusy) {
+  button.disabled = isBusy;
+  button.classList.toggle('is-busy', isBusy);
+}
+
 loginForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const submitButton = loginForm.querySelector('button[type="submit"]');
+  setButtonState(submitButton, true);
   showMessage(loginMessage, 'Checking PIN...');
   try {
     const data = await request('/api/login', {
@@ -96,6 +119,8 @@ loginForm.addEventListener('submit', async (event) => {
     dashboardView.classList.remove('hidden');
   } catch (error) {
     showMessage(loginMessage, error.message, true);
+  } finally {
+    setButtonState(submitButton, false);
   }
 });
 
@@ -128,6 +153,8 @@ document.querySelectorAll('.action-card').forEach((button) => {
 
 transactionForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const submitButton = transactionForm.querySelector('button[type="submit"]');
+  setButtonState(submitButton, true);
   const amount = Number(document.querySelector('#amount').value);
   try {
     const data = await request('/api/action', { action: selectedAction, amount });
@@ -136,11 +163,15 @@ transactionForm.addEventListener('submit', async (event) => {
     transactionForm.reset();
   } catch (error) {
     showMessage(actionMessage, error.message, true);
+  } finally {
+    setButtonState(submitButton, false);
   }
 });
 
 pinForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  const submitButton = pinForm.querySelector('button[type="submit"]');
+  setButtonState(submitButton, true);
   try {
     const data = await request('/api/action', {
       action: 'change_pin',
@@ -151,6 +182,8 @@ pinForm.addEventListener('submit', async (event) => {
     pinForm.reset();
   } catch (error) {
     showMessage(actionMessage, error.message, true);
+  } finally {
+    setButtonState(submitButton, false);
   }
 });
 

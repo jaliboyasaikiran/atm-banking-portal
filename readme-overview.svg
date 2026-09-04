@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">ATM Banking Portal project overview</title>
+  <desc id="desc">A visual overview of the ATM Banking Portal technologies, features, and real-time interaction flow.</desc>
+  <rect width="1200" height="820" rx="24" fill="#f4f8fb"/>
+  <rect width="1200" height="166" rx="24" fill="#003b73"/>
+  <rect y="142" width="1200" height="24" fill="#003b73"/>
+  <circle cx="1050" cy="82" r="126" fill="none" stroke="#f5c542" stroke-width="2" opacity=".55"/>
+  <circle cx="1050" cy="82" r="88" fill="none" stroke="#dceef9" stroke-width="2" opacity=".28"/>
+  <text x="58" y="62" fill="#f5c542" font-family="monospace" font-size="15" font-weight="700" letter-spacing="2">ATM BANKING PORTAL</text>
+  <text x="58" y="110" fill="#ffffff" font-family="sans-serif" font-size="38" font-weight="800">A live banking experience</text>
+  <text x="60" y="140" fill="#c5d9e9" font-family="sans-serif" font-size="17">Secure ATM flow, colorful feedback, and instant account updates.</text>
+
+  <text x="58" y="214" fill="#102a43" font-family="monospace" font-size="14" font-weight="700" letter-spacing="1">WHAT THE PROJECT USES</text>
+  <rect x="58" y="236" width="250" height="104" rx="10" fill="#ffffff" stroke="#006bb6" stroke-width="2"/>
+  <rect x="328" y="236" width="250" height="104" rx="10" fill="#ffffff" stroke="#f5c542" stroke-width="2"/>
+  <rect x="598" y="236" width="250" height="104" rx="10" fill="#ffffff" stroke="#006bb6" stroke-width="2"/>
+  <rect x="868" y="236" width="274" height="104" rx="10" fill="#ffffff" stroke="#f5c542" stroke-width="2"/>
+  <text x="82" y="273" fill="#006bb6" font-family="sans-serif" font-size="22" font-weight="800">Python 3.12</text>
+  <text x="82" y="301" fill="#64788b" font-family="sans-serif" font-size="14">Banking rules + API server</text>
+  <text x="352" y="273" fill="#102a43" font-family="sans-serif" font-size="22" font-weight="800">HTML + CSS</text>
+  <text x="352" y="301" fill="#64788b" font-family="sans-serif" font-size="14">Responsive visual interface</text>
+  <text x="622" y="273" fill="#006bb6" font-family="sans-serif" font-size="22" font-weight="800">JavaScript</text>
+  <text x="622" y="301" fill="#64788b" font-family="sans-serif" font-size="14">Live actions + API requests</text>
+  <text x="892" y="273" fill="#102a43" font-family="sans-serif" font-size="22" font-weight="800">JSON + Render</text>
+  <text x="892" y="301" fill="#64788b" font-family="sans-serif" font-size="14">Data exchange + deployment</text>
+
+  <text x="58" y="394" fill="#102a43" font-family="monospace" font-size="14" font-weight="700" letter-spacing="1">THE REAL-TIME USER JOURNEY</text>
+  <line x1="120" y1="485" x2="1060" y2="485" stroke="#b9d3e3" stroke-width="5"/>
+  <circle cx="120" cy="485" r="32" fill="#003b73" stroke="#f5c542" stroke-width="4"/>
+  <circle cx="355" cy="485" r="32" fill="#003b73" stroke="#f5c542" stroke-width="4"/>
+  <circle cx="590" cy="485" r="32" fill="#006bb6" stroke="#f5c542" stroke-width="4"/>
+  <circle cx="825" cy="485" r="32" fill="#006bb6" stroke="#f5c542" stroke-width="4"/>
+  <circle cx="1060" cy="485" r="32" fill="#f5c542" stroke="#003b73" stroke-width="4"/>
+  <text x="120" y="493" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="18" font-weight="700">01</text>
+  <text x="355" y="493" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="18" font-weight="700">02</text>
+  <text x="590" y="493" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="18" font-weight="700">03</text>
+  <text x="825" y="493" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="18" font-weight="700">04</text>
+  <text x="1060" y="493" text-anchor="middle" fill="#003b73" font-family="monospace" font-size="18" font-weight="700">05</text>
+  <text x="120" y="545" text-anchor="middle" fill="#102a43" font-family="sans-serif" font-size="17" font-weight="800">Swipe card</text>
+  <text x="120" y="568" text-anchor="middle" fill="#64788b" font-family="sans-serif" font-size="13">Tilt + shine</text>
+  <text x="355" y="545" text-anchor="middle" fill="#102a43" font-family="sans-serif" font-size="17" font-weight="800">Enter PIN</text>
+  <text x="355" y="568" text-anchor="middle" fill="#64788b" font-family="sans-serif" font-size="13">Secure login</text>
+  <text x="590" y="545" text-anchor="middle" fill="#102a43" font-family="sans-serif" font-size="17" font-weight="800">Dashboard</text>
+  <text x="590" y="568" text-anchor="middle" fill="#64788b" font-family="sans-serif" font-size="13">Live balance</text>
+  <text x="825" y="545" text-anchor="middle" fill="#102a43" font-family="sans-serif" font-size="17" font-weight="800">Choose action</text>
+  <text x="825" y="568" text-anchor="middle" fill="#64788b" font-family="sans-serif" font-size="13">Cards animate in</text>
+  <text x="1060" y="545" text-anchor="middle" fill="#102a43" font-family="sans-serif" font-size="17" font-weight="800">Feedback</text>
+  <text x="1060" y="568" text-anchor="middle" fill="#64788b" font-family="sans-serif" font-size="13">Instant result</text>
+
+  <rect x="58" y="638" width="1084" height="128" rx="12" fill="#dceef9" stroke="#b9d3e3"/>
+  <text x="84" y="677" fill="#006bb6" font-family="monospace" font-size="14" font-weight="700" letter-spacing="1">INCLUDED FEATURES</text>
+  <text x="84" y="714" fill="#102a43" font-family="sans-serif" font-size="15" font-weight="700">Balance</text>
+  <text x="84" y="738" fill="#64788b" font-family="sans-serif" font-size="13">Deposits + withdrawals</text>
+  <text x="320" y="714" fill="#102a43" font-family="sans-serif" font-size="15" font-weight="700">Mini statement</text>
+  <text x="320" y="738" fill="#64788b" font-family="sans-serif" font-size="13">Recent transactions</text>
+  <text x="572" y="714" fill="#102a43" font-family="sans-serif" font-size="15" font-weight="700">Security</text>
+  <text x="572" y="738" fill="#64788b" font-family="sans-serif" font-size="13">PIN change + lockout</text>
+  <text x="806" y="714" fill="#102a43" font-family="sans-serif" font-size="15" font-weight="700">ATM rules</text>
+  <text x="806" y="738" fill="#64788b" font-family="sans-serif" font-size="13">Limits + denominations</text>
+</svg>
