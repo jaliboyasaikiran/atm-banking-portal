@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sbi-atm
+    runtime: python
+    buildCommand: python -m py_compile web_app.py
+    startCommand: python web_app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10

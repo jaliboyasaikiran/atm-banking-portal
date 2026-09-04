@@ -1,0 +1,8 @@
+{
+  "name": "pratical_coding",
+  "private": true,
+  "scripts": {
+    "dev": "python web_app.py",
+    "start": "python web_app.py"
+  }
+}

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SBI ATM</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="brand-rail">
+      <p class="kicker">SBI BANK 24/7</p>
+      <div class="brand-mark sbi-logo" aria-label="State Bank of India logo"><span>SBI</span></div>
+      <h1>Your money,<br><em>within reach.</em></h1>
+      <p class="rail-copy">A clear, secure way to manage your everyday cash.</p>
+      <div class="rail-foot"><span class="status-dot"></span> Service available</div>
+    </section>
+
+    <section class="workspace">
+      <header class="topbar">
+        <span class="topbar-label">STATE BANK OF INDIA</span>
+        <span class="machine-id">ACCOUNT DETAILS</span>
+      </header>
+
+      <section id="swipe-view" class="swipe-view">
+        <div class="eyebrow">Start here</div>
+        <h2>Swipe your card<br>to begin.</h2>
+        <div class="card-reader">
+          <div id="bank-card" class="bank-card" aria-label="SBI debit card"><span class="card-shine"></span><span class="card-chip"></span><span class="card-name">STATE BANK OF INDIA</span><span class="card-number">**** 0424</span></div>
+          <div class="reader-slot"><span></span></div>
+        </div>
+        <button id="swipe-button" class="primary-button swipe-button">Swipe card <span>-></span></button>
+        <p id="swipe-message" class="message" aria-live="polite">Insert your card, then press swipe.</p>
+      </section>
+
+      <section id="login-view" class="login-view hidden">
+        <div class="eyebrow">Welcome back</div>
+        <h2>Enter your PIN<br>to continue.</h2>
+        <form id="login-form" class="pin-form">
+          <label for="card-number">Card number</label>
+          <input id="card-number" name="card-number" type="text" inputmode="numeric" maxlength="19" autocomplete="off" placeholder="8328679614" required>
+          <label for="pin">Four-digit PIN</label>
+          <input id="pin" name="pin" type="password" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="••••" required>
+          <button type="submit" class="primary-button">Unlock account <span>-></span></button>
+        </form>
+        <p id="login-message" class="message" aria-live="polite"></p>
+        <p class="demo-note">Demo card: 8328679614 &middot; PIN: 1234</p>
+      </section>
+
+      <section id="dashboard-view" class="dashboard-view hidden">
+        <div class="dashboard-heading">
+          <div>
+            <div class="eyebrow">Good to see you</div>
+            <h2>Account overview</h2>
+          </div>
+          <button id="logout-button" class="text-button">Log out</button>
+        </div>
+        <div class="balance-panel">
+          <div>
+            <span class="balance-label">Available balance</span>
+            <strong id="balance">₹10,000.00</strong>
+          </div>
+          <span class="balance-tag">READY</span>
+        </div>
+        <div class="account-meta">
+          <span>Daily limit <strong id="daily-limit">₹20,000</strong></span>
+          <span>Withdrawn today <strong id="daily-withdrawn">₹0</strong></span>
+          <span>ATM cash <strong id="atm-cash">₹0</strong></span>
+        </div>
+        <div class="action-grid">
+          <button class="action-card active" data-action="balance"><span class="action-number">01</span><strong>Check balance</strong><small>View available funds</small></button>
+          <button class="action-card" data-action="withdraw"><span class="action-number">02</span><strong>Withdraw cash</strong><small>Take money out</small></button>
+          <button class="action-card" data-action="deposit"><span class="action-number">03</span><strong>Deposit funds</strong><small>Add money in</small></button>
+          <button class="action-card" data-action="statement"><span class="action-number">04</span><strong>Mini statement</strong><small>Recent transactions</small></button>
+          <button class="action-card" data-action="change-pin"><span class="action-number">05</span><strong>Change PIN</strong><small>Update security</small></button>
+        </div>
+        <div id="statement-panel" class="transaction-panel hidden">
+          <div class="panel-heading"><span>ACCOUNT ACTIVITY</span><h3>Mini statement</h3></div>
+          <div id="statement-list" class="statement-list"></div>
+        </div>
+        <form id="transaction-form" class="transaction-panel hidden">
+          <div class="panel-heading"><span id="form-kicker">TRANSACTION</span><h3 id="form-title">Withdraw cash</h3></div>
+          <label id="amount-label" for="amount">Amount</label>
+          <div class="amount-input"><span>₹</span><input id="amount" type="number" min="500" step="100" placeholder="0" required></div>
+          <button type="submit" class="primary-button">Confirm transaction <span>-></span></button>
+        </form>
+        <form id="pin-form" class="transaction-panel hidden">
+          <div class="panel-heading"><span>SECURITY</span><h3>Change your PIN</h3></div>
+          <label for="current-pin">Current PIN</label><input id="current-pin" type="password" inputmode="numeric" maxlength="4" required>
+          <label for="new-pin">New four-digit PIN</label><input id="new-pin" type="password" inputmode="numeric" maxlength="4" required>
+          <button type="submit" class="primary-button">Save new PIN <span>-></span></button>
+        </form>
+        <p id="action-message" class="message" aria-live="polite"></p>
+      </section>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
